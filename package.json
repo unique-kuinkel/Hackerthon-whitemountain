@@ -1,0 +1,17 @@
+{
+  "name": "fair-price-nepal-root",
+  "private": true,
+  "scripts": {
+    "dev:web": "pnpm --filter @fairprice/web dev",
+    "dev:mobile": "pnpm --filter @fairprice/mobile dev",
+    "build:web": "pnpm --filter @fairprice/web build",
+    "build:shared": "pnpm --filter @fairprice/shared build",
+    "build": "pnpm build:shared && pnpm build:web",
+    "lint": "pnpm --recursive exec tsc --noEmit",
+    "typecheck": "pnpm --recursive exec tsc --noEmit",
+    "test": "pnpm --filter @fairprice/shared test && pnpm --filter @fairprice/web test"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
